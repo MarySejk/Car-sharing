@@ -98,8 +98,8 @@ div.container-intro {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    flex-grow: 1;
+    margin: 0 auto;
+    max-width: var(--container-width);
     background-color: transparent;
 }
 
@@ -148,6 +148,7 @@ h1 {
     box-shadow: 0px 3px 6px #FF00004D;
     border-radius: 40px;
     padding: var(--btn-padding);
+    font-weight: bold;
 
 }
 
@@ -157,6 +158,7 @@ h1 {
     color: var(--primary-color);
     padding: var(--btn-padding);
     border-radius: 40px;
+    font-weight: bold;
 }
 
 .arrow {
@@ -197,7 +199,8 @@ h2::after {
     display: inline-block;
     position: relative;
     bottom: 10px;
-    padding: 2px;
+    padding: 0 2px;
+    margin: 0 3px;
 }
 
 .blog-columns {
@@ -205,18 +208,27 @@ h2::after {
     font-family: var(--primary-font);
     color: #6A6A6A;
     justify-content: center;
-    align-items: center;
     gap: 1em;
     padding: 20px 0;
-    max-width: var(--container-width);
-    margin: 0 auto;
+    width: var(--container-width);
+    margin: 0 0;
     text-align: left;
+    box-sizing: border-box;
 }
 
 h3 {
     text-transform: uppercase;
     font-size: 19px;
     padding: 10px 0;
+}
+
+.blog {
+    width: var(--container-width);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 40px;
 }
 
 .blog-columns p {
@@ -227,11 +239,39 @@ h3 {
     width: 140px;
     height: 40px;
     padding: var(--btn-padding);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.blog-columns-first-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-columns-second-col {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.blog-columns-third-col {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 
 .service {
     background-color: #28272C;
+}
 
+.service img {
+    width: 170px;
+    height: 170px;
+    align-self: center;
 }
 
 .service-columns {
@@ -244,18 +284,33 @@ h3 {
     padding: 10px 0;
 }
 
-.service-columns h2 {
+.service h2 {
     color: #FFFFFF;
+    padding: 60px 0 75px 0;
 }
 
-.service.column {
+.service-column {
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
 }
 
-.service.column p {
-    padding: 10px 0;
+.service-column p {
+    padding: 15px 0;
+    color: #B2B2B2;
+}
+
+
+.service-column .btn-primary {
+    width: 84px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
 }
 
 .contact-columns {
@@ -263,16 +318,6 @@ h3 {
     margin: 0 auto;
     width: var(--container-width);
 
-}
-
-.blog {
-    width: var(--container-width);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-    padding: 40px;
-    ;
 }
 
 form {
@@ -301,14 +346,34 @@ footer {
     text-transform: uppercase;
     text-decoration: none;
     list-style: none;
+    width: 100%;
 }
-
+.footer-logo {
+    width: 80vh;
+    padding: 0 40px;
+}
 footer span {
     color: var(--primary-color);
 }
 
 .footer-columns {
     display: flex;
+    padding: 0 40px;
+   
+}
+.footer-columns li {
+    padding: 10px;
+}
+.footer-column-first {
+    display: flex;
     flex-direction: column;
-    padding: 7px;
+}
+.footer-column-second {
+    display: flex;
+    flex-direction: column;
+}
+.copyright {
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
 }
